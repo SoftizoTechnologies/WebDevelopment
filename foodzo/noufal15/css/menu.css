@@ -1,0 +1,76 @@
+<style>
+ .select-boxes{width: 280px;text-align: center;}
+select {
+    background-color: #F5F5F5;
+    border: 1px double #FB4314;
+    color: #55BB91;
+    font-family: Georgia;
+    font-weight: bold;
+    font-size: 14px;
+    height: 39px;
+    padding: 7px 8px;
+    width: 250px;
+    outline: none;
+    margin: 10px 0 10px 0;
+}
+ .affix {
+      top: 20px;
+  }
+.kk:link,.kk:visited,.kk:hover{background-color:none;color:red}
+select option{
+    font-family: Georgia;
+    font-size: 14px;
+}
+ div#expand{
+  display:block;
+}
+ .y{
+ border: 2px solid #a1a1a1;
+    padding: 5px; 
+    background: #dddddd;
+    width: 40px;
+    border-radius: 25px;
+}
+.y:hover{text-decoration:none;background:dark gray}
+
+ body {
+      position: relative;
+  }
+ 
+  div.col-sm-9 div {
+      height: 250px;
+      font-size: 28px;
+    width:450px;
+  }
+ 
+  
+  @media screen and (max-width: 810px) {
+    #section1, #section2, #section3, #section41, #section42  {
+        margin-left: 150px;
+    }
+  }
+div.parent{ 
+    border:solid white 5px;
+    display:table;
+    padding:5px; 
+    width:100%;
+    margin:5px 0; /* you can change/remove margin */
+}
+div.text{ 
+    vertical-align:top;
+    display:table-cell;
+    text-align:top;
+}
+div.parent .img{
+    vertical-align:top;
+    display:table-cell;
+    padding-right:5px;
+    width:50px; /* you can change width */
+}
+div.img img{ 
+    width:50px;
+    height:50px; /* you can change height */
+    vertical-align:top;
+}
+
+  </style>

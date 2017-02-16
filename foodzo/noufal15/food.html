@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{ 
+        font-family:Tahoma, Geneva, sans-serif;
+        font-size:12px;
+    }
+    .content{
+        width:900px;
+        margin:0 auto;
+    }
+    #searchid
+    {
+        width:500px;
+        border:solid 1px #000;
+        padding:10px;
+        font-size:14px;
+    }
+    #result
+    {
+        position:absolute;
+        width:250px;
+        padding:10px;
+        display:none;
+        margin-top:-1px;
+        border-top:0px;
+        overflow:hidden;
+        border:1px #CCC solid;
+        background-color: white;
+        margin-left:250px;
+        border-radius:15px;
+        overflow-y:scroll;
+        
+    }
+    .show
+    {
+        padding:10px; 
+        border-bottom:1px #999 dashed;
+        font-size:15px; 
+        height:50px;
+    }
+    .show:hover
+    {
+        background:#4c66a4;
+        color:#FFF;
+        cursor:pointer;
+    }
+</style>
+</head>
+<script type="text/javascript">
+$(function(){
+$(".search").keyup(function() 
+{ 
+var searchid = $(this).val();
+var dataString = 'search='+ searchid;
+if(searchid!='')
+{
+    $.ajax({
+    type: "POST",
+    url: "s.php",
+    data: dataString,
+    cache: false,
+    success: function(html)
+    {
+    $("#result").html(html).show();
+    }
+    });
+}return false;    
+});
+
+jQuery("#result").live("click",function(e){ 
+    var $clicked = $(e.target);
+    var $name = $clicked.find('.name').html();
+    var decoded = $("<div/>").html($name).text();
+    $('#searchid').val(decoded);
+});
+jQuery(document).live("click", function(e) { 
+    var $clicked = $(e.target);
+    if (! $clicked.hasClass("search")){
+    jQuery("#result").fadeOut(); 
+    }
+});
+$('#searchid').click(function(){
+    jQuery("#result").fadeIn();
+});
+});
+</script>
+
+
+<script type="text/javascript">
+    function submitdata()
+    {
+        //alert(document.f1.dcharge.value)
+        document.f1.submit();
+        
+    }
+</script>
+<body>
+
+
+
+<!--<button class="accordion" >-->
+<label>Filter</label>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" value='all' id='fall' class=" filter ffilter icheck">
+                                                <label>Open Now <small></small></label>&nbsp;&nbsp;&nbsp;<input type="checkbox" value='all' id='fall' class=" filter ffilter icheck">
+                                                <label>All <small></small></label></button>
+<div class="panel">
+   <div style=''>
+                        <div>
+                            <div>
+                                <div>
+                                    
+                                    <div style="float:left">
+                                        
+                                        <h6 style="padding:2px 0; margin:2px 0"></h6>
+                                        <ul  style="list-style:none">
+                                            <li>
+                                            <form class="form-inline" name="f1" method="post" action="">
+                                                <input type="checkbox" value='all' id='fall' class=" filter ffilter icheck">
+                                                <label>All <small></small></label></li>
+											<li class="filtr-button " data-filter="opennow">
+												
+                                            <li ><input type="checkbox" id='fveg' value='veg' class=" filter ffilter icheck"><label>Veg <small></small></label></li>
+                                            <li><input type="checkbox" id='fnonveg' value='nonveg' class="filter ffilter icheck"><label>Nonveg <small></small></label></li>
+                                         <!--<li><input type="checkbox" id='fnonveg' value='nonveg' class="filter ffilter icheck"><label>Nonveg <small></small></label></li>-->
+                               
+										</ul>
+                                    </div>
+
+                                    <div style="float:left;margin-left:6px ">
+                                        <h6 style="padding:2px 0; margin:2px 0"></h6>
+                                        <ul style="list-style:none">
+                                           <!-- <li><input type="checkbox" name='sort' value='deliverytime' id='dtime' class=" icheck sort" ><label>Delivery Time <small></small></label></li>-->
+                                            <li><input type="checkbox" name='dcharge' value='rest_delivery_fee' id='damount' class=" icheck sort" onclick="submitdata()" ><label>Delivery Charge <small></small></label></li>
+                                            <li><input type="checkbox" name='sort' value='minorder' id='morder' class=" icheck sort" ><label>Minimum Order <small></small></label></li>
+                                            <li><input type="checkbox" name='sort' value='rating' id='crating' class=" icheck sort" ><label>Rating/Popular <small></small></label></li>
+                                        </ul>
+                                    </div>
+
+                                    <div style="float:left;margin-left:6px ">
+                                        <h6 style="padding:2px 0; margin:2px 0"></h6>
+                                       <!-- <div style='max-height:96px; overflow-y: scroll;float:left'>-->
+                                                <ul style="list-style:none;float:left">
+                                                <li class='filtr-button filter' ><input type='checkbox' name="Indian" value='Indian' onclick="submitdata()" class=' filter ca icheck'><label>Indian <small></small></label></li>
+                                                <li class='filtr-button filter' >
+												<input type='checkbox' value='Malaysian' class=' filter ca icheck'>
+												<label>Malaysian <small></small></label></li><li class='filtr-button filter' >
+
+												<input type='checkbox' value='Mexican' class=' filter ca icheck'><label>Mexican <small></small></label></li>
+
+                                                   </ul>
+                                                 </div>
+
+
+                                                 <div style="float:left;margin-left:6px ">
+                                        <h6 style="padding:2px 0; margin:2px 0"></h6>
+                                       <!-- <div style='max-height:96px; overflow-y: scroll;float:left'>-->
+                                                <ul style="list-style:none;float:left">
+												<li>
+
+
+                                                <input type='checkbox' value='Tandoori' class=' filter ca icheck'><label>Tandoori <small></small></label></li>
+												<li>
+
+                                            
+                                                <li class='filtr-button filter' >
+
+                                                <input type='checkbox' value='Sea_Food' class=' filter ca icheck'><label>Sea Food <small></small></label></li>
+												<li>
+
+                                                <input type='checkbox' value='South_Indian' class=' filter ca icheck'><label>South Indian <small></small></label></li>
+												<li>
+
+                                                 </ul>
+                                                 </div>
+
+                                                  <div style="float:left;margin-left:6px ">
+                                        <h6 style="padding:2px 0; margin:2px 0"></h6>
+                                       <!-- <div style='max-height:96px; overflow-y: scroll;float:left'>-->
+                                                <ul style="list-style:none;float:left">
+
+
+
+                                                <input type='checkbox' value='Ice_Cream' class=' filter ca icheck'><label>Ice Cream <small></small></label></li>
+												<li>
+
+                                                <input type='checkbox' value='Rolls_and_Sandwiches' class=' filter ca icheck'><label>Rolls & Sandwiches <small></small></label></li>
+                                                
+
+                                                
+                                                <li class='filtr-button filter' >
+
+
+
+												<li><input type='checkbox' value='Breakfast' class=' filter ca icheck'><label>Breakfast <small></small></label></li><li class='filtr-button filter' >
+
+                                                </ul>
+                                                 </div>
+
+                                                 <div style="float:left;margin-left:6px ">
+                                        <h6 style="padding:2px 0; margin:2px 0"></h6>
+                                       <!-- <div style='max-height:96px; overflow-y: scroll;float:left'>-->
+                                                <ul style="list-style:none;float:left">
+
+
+                                                <input type='checkbox' value='Dinner' class=' filter ca icheck'><label>Italian <small></small></label></li><li class='filtr-button filter' >
+                                                <input type='checkbox' value='Frozen_Yogurt' class=' filter ca icheck'><label>Frozen Yogurt <small></small></label></li><li class='filtr-button filter' >
+                                                <input type='checkbox' value='Thai' class=' filter ca icheck'><label>Thai <small></small></label></li></ul><ul class='filters col-xs-6' style='padding-left:15px;list-style:none;float:left'><li class='filtr-button filter' >
+
+                                                 </ul>
+                                                 </div>
+                                                
+
+                                                <div style="float:left;margin-left:6px ">
+                                        <h6 style="padding:2px 0; margin:2px 0"></h6>
+                                       <!-- <div style='max-height:96px; overflow-y: scroll;float:left'>-->
+                                                <ul style="list-style:none;float:left">
+                                                <li class='filtr-button filter' >
+
+
+
+                                                <input type='checkbox' value='Chinese' class=' filter ca icheck'><label>Chinese <small></small></label></li><li class='filtr-button filter' >
+                                               
+
+                                                <input type='checkbox' value='Arabian' class=' filter ca icheck'><label>Arabian <small></small></label></li><li class='filtr-button filter' >
+
+                                                <input type='checkbox' value='Continental' class=' filter ca icheck'><label>Continental <small></small></label></li><li class='filtr-button filter' >
+                                                 </ul>
+                                                 </div>
+
+                                                  <div style="float:left;margin-left:6px ">
+                                        <h6 style="padding:2px 0; margin:2px 0"></h6>
+                                       <!-- <div style='max-height:96px; overflow-y: scroll;float:left'>-->
+                                                <ul style="list-style:none;float:left">
+
+
+                                                <input type='checkbox' value='Burgers' class=' filter ca icheck'><label>Burgers <small></small></label></li><li class='filtr-button filter' >
+                                               
+
+
+                                                
+                                                <li class='filtr-button filter' >
+
+
+
+
+
+
+
+                                                <input type='checkbox' value='Chats' class=' filter ca icheck'><label>Chats <small></small></label></li><li class='filtr-button filter' >
+                                                
+
+
+
+
+                                                <input type='checkbox' value='North_Indian' class=' filter ca icheck'><label>North Indian <small></small></label></li><li class='filtr-button filter' >
+                                                </ul>
+                                                 </div>
+                                                 <div style="float:left;margin-left:6px ">
+                                        <h6 style="padding:2px 0; margin:2px 0"></h6>
+                                       <!-- <div style='max-height:96px; overflow-y: scroll;float:left'>-->
+                                                <ul style="list-style:none;float:left">
+
+                                                 
+
+
+
+                                                <input type='checkbox' value='Cakes' class=' filter ca icheck'><label>Cakes <small></small></label></li><li class='filtr-button filter' >
+                                                <input type='checkbox' value='Shakes_and_Juices' class=' filter ca icheck'><label>Shakes & Juices <small></small></label></li><li class='filtr-button filter' >
+                                                
+
+                                                 
+                                                <li class='filtr-button filter' >
+
+
+
+
+
+                                                <input type='checkbox' value='Lunch' class=' filter ca icheck'><label>Pizza <small></small></label></li><li class='filtr-button filter' >
+
+                                                 </ul>   
+                                                  </div>    
+                                                 
+
+<!--
+
+                                                <input type='checkbox' value='Pizza' class=' filter ca icheck'><label>Pizza <small></small></label></li><li class='filtr-button filter' >
+                                                <input type='checkbox' value='Italian' class=' filter ca icheck'><label>Italian <small></small></label></li>-->
+                                                                              
+                                    </div>
+                                    
+                                    <div class="col-md-3 col-xs-12" style="float:left">
+                                        <h6 style="padding:2px 0; margin:2px 0"></h6>
+                                        
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" name='my_content1' placeholder="Search Restaurant" value=''>
+                                                <span class="input-group-btn">
+                                                    <button class="btn btn-warning" name="Restaurant" type="submit" style="padding:9px">Go!</button>
+                                                </span>
+                                            </div>
+                                       
+                                        
+                                            <div class="input-group" style="margin-top:5px;">
+                                                <input type="text" class="form-control" name='my_content' placeholder="Search Food">
+                                                <input type="hidden" name='my_city' value='26'>
+                                                <input type="hidden" name='my_area' value='43'>
+                                                <span class="input-group-btn">
+                                                    <button class="btn btn-warning" type="submit" style="padding:9px">Go!</button>
+                                                </span>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!--End collapse -->
+                    </div></div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].onclick = function(){
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    }
+}
+</script>
+
+</body>
+</html>

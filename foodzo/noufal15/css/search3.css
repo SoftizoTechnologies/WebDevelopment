@@ -1,0 +1,27 @@
+ <style>
+.button1 {
+    background-color: #009900;
+    border: none;
+    color: ;
+    padding: 10px 60px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.button2 {
+    background-color: #990000;
+    border: none;
+    color: ;
+    padding: 10px 60px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+</style>
