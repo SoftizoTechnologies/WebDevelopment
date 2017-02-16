@@ -1,0 +1,48 @@
+C:\Users\lenovo\Documents\Visual Studio 2010\Projects\BillingSoftware\BillingSoftware\obj\x86\Debug\BillingSoftware.Login.resources
+C:\Users\lenovo\Documents\Visual Studio 2010\Projects\BillingSoftware\BillingSoftware\obj\x86\Debug\BillingSoftware.Properties.Resources.resources
+C:\Users\lenovo\Documents\Visual Studio 2010\Projects\BillingSoftware\BillingSoftware\obj\x86\Debug\BillingSoftware.csproj.GenerateResource.Cache
+C:\Users\lenovo\Documents\Visual Studio 2010\Projects\BillingSoftware\BillingSoftware\bin\Debug\BillingSoftware.exe
+C:\Users\lenovo\Documents\Visual Studio 2010\Projects\BillingSoftware\BillingSoftware\bin\Debug\BillingSoftware.pdb
+C:\Users\lenovo\Documents\Visual Studio 2010\Projects\BillingSoftware\BillingSoftware\obj\x86\Debug\BillingSoftware.Main.resources
+C:\Users\lenovo\Documents\Visual Studio 2010\Projects\BillingSoftware\BillingSoftware\obj\x86\Debug\BillingSoftware.exe
+C:\Users\lenovo\Documents\Visual Studio 2010\Projects\BillingSoftware\BillingSoftware\obj\x86\Debug\BillingSoftware.pdb
+C:\Users\lenovo\Documents\Visual Studio 2010\Projects\BillingSoftware\BillingSoftware\obj\x86\Debug\BillingSoftware.Sales.resources
+C:\Users\lenovo\Documents\Visual Studio 2010\Projects\BillingSoftware\BillingSoftware\bin\Debug\Data.mdf
+C:\Users\lenovo\Documents\Visual Studio 2010\Projects\BillingSoftware\BillingSoftware\bin\Debug\Data_log.ldf
+C:\Users\lenovo\Documents\Visual Studio 2010\Projects\BillingSoftware\BillingSoftware\obj\x86\Debug\BillingSoftware.Payment.resources
+C:\Users\lenovo\Documents\Visual Studio 2010\Projects\BillingSoftware\BillingSoftware\obj\x86\Debug\BillingSoftware.Report.resources
+C:\Users\lenovo\Documents\Visual Studio 2010\Projects\BillingSoftware\BillingSoftware\obj\x86\Debug\BillingSoftware.csprojResolveAssemblyReference.cache
+C:\Users\HP\Documents\Visual Studio 2010\Projects\BillingSoftware\BillingSoftware\bin\Debug\BillingSoftware.exe.config
+C:\Users\HP\Documents\Visual Studio 2010\Projects\BillingSoftware\BillingSoftware\bin\Debug\BillingSoftware.exe
+C:\Users\HP\Documents\Visual Studio 2010\Projects\BillingSoftware\BillingSoftware\bin\Debug\BillingSoftware.pdb
+C:\Users\HP\Documents\Visual Studio 2010\Projects\BillingSoftware\BillingSoftware\bin\Debug\mysql.data.dll
+C:\Users\HP\Documents\Visual Studio 2010\Projects\BillingSoftware\BillingSoftware\obj\x86\Debug\BillingSoftware.Company_List.resources
+C:\Users\HP\Documents\Visual Studio 2010\Projects\BillingSoftware\BillingSoftware\obj\x86\Debug\BillingSoftware.Payment.resources
+C:\Users\HP\Documents\Visual Studio 2010\Projects\BillingSoftware\BillingSoftware\obj\x86\Debug\BillingSoftware.Report.resources
+C:\Users\HP\Documents\Visual Studio 2010\Projects\BillingSoftware\BillingSoftware\obj\x86\Debug\BillingSoftware.Sales.resources
+C:\Users\HP\Documents\Visual Studio 2010\Projects\BillingSoftware\BillingSoftware\obj\x86\Debug\BillingSoftware.Login.resources
+C:\Users\HP\Documents\Visual Studio 2010\Projects\BillingSoftware\BillingSoftware\obj\x86\Debug\BillingSoftware.Main.resources
+C:\Users\HP\Documents\Visual Studio 2010\Projects\BillingSoftware\BillingSoftware\obj\x86\Debug\BillingSoftware.Properties.Resources.resources
+C:\Users\HP\Documents\Visual Studio 2010\Projects\BillingSoftware\BillingSoftware\obj\x86\Debug\BillingSoftware.csproj.GenerateResource.Cache
+C:\Users\HP\Documents\Visual Studio 2010\Projects\BillingSoftware\BillingSoftware\obj\x86\Debug\BillingSoftware.exe
+C:\Users\HP\Documents\Visual Studio 2010\Projects\BillingSoftware\BillingSoftware\obj\x86\Debug\BillingSoftware.pdb
+C:\Users\HP\documents\visual studio 2010\Projects\BillingSoftware\BillingSoftware\obj\x86\Debug\BillingSoftware.Create_New_Company.resources
+C:\Users\HP\documents\visual studio 2010\Projects\BillingSoftware\BillingSoftware\obj\x86\Debug\BillingSoftware.New_Comapny.resources
+C:\Users\HP\documents\visual studio 2010\Projects\BillingSoftware\BillingSoftware\obj\x86\Debug\BillingSoftware.Update_list.resources
+C:\Users\HP\Documents\Visual Studio 2010\Projects\BillingSoftware\BillingSoftware\obj\x86\Debug\BillingSoftware.list.resources
+C:\Users\HP\documents\visual studio 2010\Projects\BillingSoftware\BillingSoftware\obj\x86\Debug\BillingSoftware.Customer_Details.resources
+C:\Users\HP\documents\visual studio 2010\Projects\BillingSoftware\BillingSoftware\obj\x86\Debug\BillingSoftware.New_Customer_Details.resources
+F:\BillingSoftware\BillingSoftware\bin\Debug\BillingSoftware.exe.config
+F:\BillingSoftware\BillingSoftware\obj\x86\Debug\BillingSoftware.exe
+F:\BillingSoftware\BillingSoftware\obj\x86\Debug\BillingSoftware.pdb
+F:\BillingSoftware\BillingSoftware\obj\x86\Debug\BillingSoftware.Create_New_Company.resources
+F:\BillingSoftware\BillingSoftware\obj\x86\Debug\BillingSoftware.Customer_Details.resources
+F:\BillingSoftware\BillingSoftware\obj\x86\Debug\BillingSoftware.list.resources
+F:\BillingSoftware\BillingSoftware\obj\x86\Debug\BillingSoftware.New_Customer_Details.resources
+F:\BillingSoftware\BillingSoftware\obj\x86\Debug\BillingSoftware.Payment.resources
+F:\BillingSoftware\BillingSoftware\obj\x86\Debug\BillingSoftware.Sales.resources
+F:\BillingSoftware\BillingSoftware\obj\x86\Debug\BillingSoftware.Login.resources
+F:\BillingSoftware\BillingSoftware\obj\x86\Debug\BillingSoftware.Properties.Resources.resources
+F:\BillingSoftware\BillingSoftware\obj\x86\Debug\BillingSoftware.csproj.GenerateResource.Cache
+F:\BillingSoftware\BillingSoftware\bin\Debug\BillingSoftware.exe
+F:\BillingSoftware\BillingSoftware\bin\Debug\BillingSoftware.pdb
